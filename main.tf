@@ -8,15 +8,6 @@ resource "aws_instance" "web" {
   }
 }
 
-
-provider "aws" {
-  region     = "us-east-1"
-  access_key = "AKIAUUMP4EM2LN7BSBPX"
-  secret_key = "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"
-
-}
-
-
 resource "aws_instance" "My_new_instance" {
   for_each      = var.loop_name
   ami           = "ami-0cff7528ff583bf9a"
